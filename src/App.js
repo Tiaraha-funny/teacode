@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import FetchData from './Components/fetchData'
+
+export const ENDPOINT =
+  'https://teacode-recruitment-challenge.s3.eu-central-1.amazonaws.com/users.json'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <section>
+      <header>
+        <h1>Contacts</h1>
       </header>
-    </div>
-  );
+      <ul>
+        <FetchData />
+      </ul>
+    </section>
+  )
 }
 
-export default App;
+export default App
